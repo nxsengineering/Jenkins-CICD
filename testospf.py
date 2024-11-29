@@ -4,7 +4,7 @@ Author: NXS Engineering Inc.
 from nornir import InitNornir
 from nornir_scrapli.tasks import send_command
 
-nr = InitNornir(config_file="config_yaml")
+nr = InitNornir(config_file="testconfig.yaml")
 
 def pull_info(task):
     """
