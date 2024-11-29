@@ -6,7 +6,7 @@ from nornir_utils.plugins.tasks.data import load_yaml
 from nornir_jinja2.plugins.tasks import template_file
 from nornir.core.exceptions import NornirExecutionError
 
-nr = InitNornir(config_file=config_file)
+nr = InitNornir(config_file="testconfig.yaml")
 def pull_vars(task):
     """
     Pull host vars
