@@ -2,7 +2,7 @@
 Author: NXS Engineering Inc.
 Purpose: Simple Test Script For OSPF.
 """
-
+import os
 from jinja2.environment import Template
 from nornir import InitNornir
 from nornir_scrapli.tasks import send_configs
@@ -12,6 +12,9 @@ from nornir_jinja2.plugins.tasks import template_file
 from nornir.core.exceptions import NornirExecutionError
 
 nr = InitNornir(config_file="testconfig.yaml")
+nr.inventory.defaults.username = os.getenv("USERNAME")
+nr.inventory.defaults.password = os.getenv("PASSWORD")
+
 def pull_vars(task):
     """
     Pull host vars
