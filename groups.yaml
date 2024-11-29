@@ -2,6 +2,8 @@
 
 cisco_group:
   platform: 'ios'
+  username: john
+  password: cisco
   connection_options:
     scrapli:
         extras:
