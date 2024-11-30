@@ -4,8 +4,10 @@ Author: NXS Engineering Inc.
 from nornir import InitNornir
 from nornir_scrapli.tasks import send_command
 import os
+import sys
 
-nr = InitNornir(config_file="testconfig.yaml")
+config_file = sys.argv[1]
+nr = InitNornir(config_file=config_file)
 nr.inventory.defaults.username = os.getenv("USERNAME")
 nr.inventory.defaults.password = os.getenv("PASSWORD")
 
